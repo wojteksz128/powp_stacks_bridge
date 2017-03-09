@@ -8,8 +8,7 @@ public class StackList {
 	public void pushElement(int i) {
 		if (last == null) {
 			last = new Node(i);
-		}
-		else {
+		} else {
 			last.next = new Node(i);
 			last.next.prev = last;
 			last = last.next;

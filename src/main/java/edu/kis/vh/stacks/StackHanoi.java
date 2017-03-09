@@ -2,7 +2,7 @@ package edu.kis.vh.stacks;
 
 public class StackHanoi extends stack {
 
-int totalRejected = 0;
+	int totalRejected = 0;
 
 	public int reportRejected() {
 		return totalRejected;
@@ -11,8 +11,7 @@ int totalRejected = 0;
 	public void push(int in) {
 		if (!isEmpty() && in > top()) {
 			totalRejected++;
-		}
-		else {
+		} else {
 			super.push(in);
 		}
 	}
