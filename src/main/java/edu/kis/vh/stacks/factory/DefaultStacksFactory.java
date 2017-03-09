@@ -8,22 +8,22 @@ import edu.kis.vh.stacks.StackHanoi;
 public class DefaultStacksFactory implements StacksFactory {
 
 	@Override
-	public Stack GetStandardStack() {
+	public Stack getStandardStack() {
 		return new Stack();
 	}
 
 	@Override
-	public Stack GetFalseStack() {
+	public Stack getFalseStack() {
 		return new Stack();
 	}
 
 	@Override
-	public StackFIFO GetFIFOStack() {
+	public StackFIFO getFIFOStack() {
 		return new StackFIFO();
 	}
 
 	@Override
-	public StackHanoi GetHanoiStack() {
+	public StackHanoi getHanoiStack() {
 		return new StackHanoi();
 	}
 
