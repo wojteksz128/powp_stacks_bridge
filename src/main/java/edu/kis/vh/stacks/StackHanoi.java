@@ -5,13 +5,15 @@ public class StackHanoi extends stack {
 int totalRejected = 0;
 
 	public int reportRejected() {
-	return totalRejected;
+		return totalRejected;
 	}
 
 	public void push(int in) {
-	if (!isEmpty() && in > top())
-		totalRejected++;
-		else
+		if (!isEmpty() && in > top()) {
+			totalRejected++;
+		}
+		else {
 			super.push(in);
+		}
 	}
 }
