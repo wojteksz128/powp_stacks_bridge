@@ -2,18 +2,18 @@ package edu.kis.vh.stacks;
 
 public class StackFIFO extends Stack {
 
-	public Stack temp = new Stack();
+	public Stack stack = new Stack();
 
 	@Override
 	public int pop() {
 		while (!isEmpty()) {
-			temp.push(super.pop());
+			stack.push(super.pop());
 		}
 
-		int ret = temp.pop();
+		int ret = stack.pop();
 
-		while (!temp.isEmpty()) {
-			push(temp.pop());
+		while (!stack.isEmpty()) {
+			push(stack.pop());
 		}
 
 		return ret;
