@@ -6,8 +6,9 @@ public class StackList {
 	int i;
 
 	public void pushElement(int i) {
-		if (last == null)
+		if (last == null) {
 			last = new Node(i);
+		}
 		else {
 			last.next = new Node(i);
 			last.next.prev = last;
@@ -24,14 +25,16 @@ public class StackList {
 	}
 
 	public int peek() {
-		if (empty())
+		if (empty()) {
 			return -1;
+		}
 		return last.value;
 	}
 
 	public int pop() {
-		if (empty())
+		if (empty()) {
 			return -1;
+		}
 		int ret = last.value;
 		last = last.prev;
 		return ret;
