@@ -42,3 +42,5 @@ class StacksDemo {
 	}
 
 }
+
+// Alt + Strzałka w lewo  oraz Alt + Strzałka w prawo przemieszcza do miejsc zmian w projekcie.
