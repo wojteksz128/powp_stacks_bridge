@@ -3,7 +3,6 @@ package edu.kis.vh.stacks.list;
 public class StackList {
 
 	private Node last;
-	private int i;
 
 	public void pushElement(int i) {
 		if (last == null) {
