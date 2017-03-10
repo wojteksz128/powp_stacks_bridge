@@ -37,4 +37,45 @@ public class StackFIFOTest {
 		
 		Assert.assertTrue(stack.isFull());
 	}
+	
+	@Test
+	public void testTop() {
+		StackFIFO stack = new StackFIFO();
+		final int EMPTY_STACK_VALUE = -1;
+		
+		Assert.assertEquals(EMPTY_STACK_VALUE, stack.top());
+		
+		int testValue = 4;
+		stack.push(testValue);
+		
+		Assert.assertEquals(testValue, stack.top());
+		Assert.assertEquals(testValue, stack.top());
+	}
+	
+	@Test
+	public void testPop() {
+		StackFIFO stack = new StackFIFO();
+		final int EMPTY_STACK_VALUE = -1;
+		
+		Assert.assertEquals(EMPTY_STACK_VALUE, stack.pop());
+		
+		int testValue = 4;
+		stack.push(testValue);
+		
+		Assert.assertEquals(testValue, stack.pop());
+		Assert.assertEquals(EMPTY_STACK_VALUE, stack.pop());
+	}
+	
+	@Test
+	public void testPopOrder() {
+		StackFIFO stack = new StackFIFO();
+		int firstValue = 1,
+			secondValue = 2;
+		
+		stack.push(firstValue);
+		stack.push(secondValue);
+		
+		Assert.assertEquals(firstValue, stack.pop());
+		Assert.assertEquals(secondValue, stack.pop());
+	}
 }
