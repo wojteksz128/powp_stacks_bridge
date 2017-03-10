@@ -2,7 +2,7 @@ package edu.kis.vh.stacks;
 
 public class StackFIFO extends Stack {
 
-	private Stack stack = new Stack();
+	private final Stack stack = new Stack();
 
 	@Override
 	public int pop() {
