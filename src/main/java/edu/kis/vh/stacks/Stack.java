@@ -11,6 +11,9 @@ package edu.kis.vh.stacks;
  */
 public class Stack {
 
+	/**
+	 * Value returned, when stack is empty.
+	 */
 	public static final int STACK_EMPTY = -1;
 
 	private static final int STACK_SIZE = 12;
