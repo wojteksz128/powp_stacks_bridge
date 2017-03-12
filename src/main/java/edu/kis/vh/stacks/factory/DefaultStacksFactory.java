@@ -7,6 +7,7 @@ import edu.kis.vh.stacks.StackHanoi;
 
 public class DefaultStacksFactory implements StacksFactory {
 
+	// TODO: What are the differences between methods getStandardStack() and getFalseStack()?
 	@Override
 	public Stack getStandardStack() {
 		return new Stack();

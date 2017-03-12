@@ -1,5 +1,6 @@
 package edu.kis.vh.stacks;
 
+// TODO: Can you implement Stack with variable size? Maybe with parameter size in constructor? 
 public class Stack {
 
 	private static final int STACK_EMPTY = -1;
@@ -14,10 +15,12 @@ public class Stack {
 		return total;
 	}
 
+
 	public void push(int i) {
 		if (!isFull()) {
 			items[++total] = i;
 		}
+		// TODO: Add action if push is impossible.
 	}
 
 	public boolean isEmpty() {
@@ -30,6 +33,7 @@ public class Stack {
 
 	public int top() {
 		if (isEmpty()) {
+			// TODO: Maybe if stack is empty, than method should throw exception just like 'EmptyStackException'.
 			return -1;
 		}
 		return items[total];
@@ -37,6 +41,7 @@ public class Stack {
 
 	public int pop() {
 		if (isEmpty()) {
+			// TODO: Maybe if stack is empty, than method should throw exception just like 'EmptyStackException'.
 			return -1;
 		}
 		return items[total--];

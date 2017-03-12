@@ -7,7 +7,7 @@ import edu.kis.vh.stacks.StackHanoi;
 public interface StacksFactory {
 
 	public Stack getStandardStack();
-
+ 
 	public Stack getFalseStack();
 
 	public StackFIFO getFIFOStack();

@@ -18,12 +18,14 @@ public class StackList {
 		return last == null;
 	}
 
+	// TODO: This method is needed? 
 	public boolean full() {
 		return false;
 	}
 
 	public int peek() {
 		if (empty()) {
+			// TODO: Maybe if list is empty, than method should throw exception just like 'EmptyListException'.
 			return -1;
 		}
 		return last.getValue();
@@ -31,6 +33,7 @@ public class StackList {
 
 	public int pop() {
 		if (empty()) {
+			// TODO: Maybe if list is empty, than method should throw exception just like 'EmptyListException'.
 			return -1;
 		}
 		int ret = last.getValue();
