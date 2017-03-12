@@ -10,6 +10,11 @@ package edu.kis.vh.stacks.list;
  */
 public class StackList {
 
+	/**
+	 * Value returned, when stack is empty.
+	 */
+	public static final int STACK_EMPTY = -1;
+	
 	private Node last;
 
 	/**
@@ -47,27 +52,27 @@ public class StackList {
 	}
 
 	/**
-	 * Return last inserted value from the stack without removing it. If stack is empty, than return -1.
+	 * Return last inserted value from the stack without removing it. If stack is empty, than return {@link StackList#STACK_EMPTY}.
 	 * 
 	 * @return last inserted value
 	 */
 	public int peek() {
 		if (empty()) {
 			// TODO: Maybe if list is empty, than method should throw exception just like 'EmptyListException'.
-			return -1;
+			return STACK_EMPTY;
 		}
 		return last.getValue();
 	}
 
 	/**
-	 * Return last inserted value from the stack and remove it. If stack is empty, than return -1.
+	 * Return last inserted value from the stack and remove it. If stack is empty, than return {@link StackList#STACK_EMPTY}.
 	 * 
 	 * @return last inserted value
 	 */
 	public int pop() {
 		if (empty()) {
 			// TODO: Maybe if list is empty, than method should throw exception just like 'EmptyListException'.
-			return -1;
+			return STACK_EMPTY;
 		}
 		int ret = last.getValue();
 		last = last.getPrev();
