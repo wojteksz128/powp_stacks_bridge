@@ -66,7 +66,7 @@ public class Stack {
 	public int top() {
 		if (isEmpty()) {
 			// TODO: Maybe if stack is empty, than method should throw exception just like 'EmptyStackException'.
-			return -1;
+			return STACK_EMPTY;
 		}
 		return items[total];
 	}
@@ -79,7 +79,7 @@ public class Stack {
 	public int pop() {
 		if (isEmpty()) {
 			// TODO: Maybe if stack is empty, than method should throw exception just like 'EmptyStackException'.
-			return -1;
+			return STACK_EMPTY;
 		}
 		return items[total--];
 	}
