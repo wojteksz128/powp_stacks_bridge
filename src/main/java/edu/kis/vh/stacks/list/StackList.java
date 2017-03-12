@@ -1,9 +1,22 @@
 package edu.kis.vh.stacks.list;
 
+/**
+ * Implementation of <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">stack</a> data structure. This structure in basically implement two methods: 
+ * <br>   - {@link StackList#pushElement(int)} - add element into the stack,
+ * <br>   - {@link StackList#pop()} - get last added element from the stack and remove it.
+ * 
+ * @author Wojciech Szczepaniak
+ *
+ */
 public class StackList {
 
 	private Node last;
 
+	/**
+	 * Insert value into the stack.
+	 * 
+	 * @param i inserted value
+	 */
 	public void pushElement(int i) {
 		if (last == null) {
 			last = new Node(i);
@@ -14,15 +27,30 @@ public class StackList {
 		}
 	}
 
+	/**
+	 * Returns true if the stack contains no elements.
+	 * 
+	 * @return true if this stack contains no elements
+	 */
 	public boolean empty() {
 		return last == null;
 	}
 
 	// TODO: This method is needed? 
+	/**
+	 * Returns true if stack cannot storied more elements.
+	 * 
+	 * @return true if this stack cannot storied more elements
+	 */
 	public boolean full() {
 		return false;
 	}
 
+	/**
+	 * Return last inserted value from the stack without removing it. If stack is empty, than return -1.
+	 * 
+	 * @return last inserted value
+	 */
 	public int peek() {
 		if (empty()) {
 			// TODO: Maybe if list is empty, than method should throw exception just like 'EmptyListException'.
@@ -31,6 +59,11 @@ public class StackList {
 		return last.getValue();
 	}
 
+	/**
+	 * Return last inserted value from the stack and remove it. If stack is empty, than return -1.
+	 * 
+	 * @return last inserted value
+	 */
 	public int pop() {
 		if (empty()) {
 			// TODO: Maybe if list is empty, than method should throw exception just like 'EmptyListException'.

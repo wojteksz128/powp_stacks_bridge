@@ -2,7 +2,7 @@ package edu.kis.vh.stacks;
 
 // TODO: Can you implement Stack with variable size? Maybe with parameter size in constructor? 
 /**
- * Implementation of <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">stack</a> data structure. This structure in basically implement two methods:
+ * Implementation of <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">stack</a> data structure, where we can storied no more than {@value Stack#STACK_SIZE} elements. This structure in basically implement two methods:
  * <br>   - {@link Stack#push} - add element into the stack,
  * <br>   - {@link Stack#pop} - get last added element from the stack and remove it.
  * 
