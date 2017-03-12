@@ -11,7 +11,7 @@ package edu.kis.vh.stacks;
  */
 public class Stack {
 
-	private static final int STACK_EMPTY = -1;
+	public static final int STACK_EMPTY = -1;
 
 	private static final int STACK_SIZE = 12;
 
