@@ -31,5 +31,16 @@ public class StackListTest {
 		
 		Assert.assertFalse(list.empty());
 	}
-	
+
+	@Test
+	public void testPeek() {
+		final int EMPTY_LIST = -1;
+		Assert.assertEquals(EMPTY_LIST, list.peek());
+		
+		int value = 4;
+		list.pushElement(value);
+		
+		Assert.assertEquals(value, list.peek());
+		Assert.assertEquals(value, list.peek());
+	}
 }
