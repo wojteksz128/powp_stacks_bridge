@@ -43,4 +43,15 @@ public class StackListTest {
 		Assert.assertEquals(value, list.peek());
 		Assert.assertEquals(value, list.peek());
 	}
+
+	@Test
+	public void testPop() {
+		final int EMPTY_LIST = -1;
+		
+		int value = 4;
+		list.pushElement(value);
+		
+		Assert.assertEquals(value, list.pop());
+		Assert.assertEquals(EMPTY_LIST, list.pop());
+	}
 }
