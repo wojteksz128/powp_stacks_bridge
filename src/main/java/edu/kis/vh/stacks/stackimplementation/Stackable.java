@@ -1,3 +1,7 @@
+/*
+ * Adn 11. Realizacja zadania 10 pomogła mi na zmianę wartości zwracanych przy pustym stosie przez StackArray i StackList.
+ */
+
 package edu.kis.vh.stacks.stackimplementation;
 
 import edu.kis.vh.stacks.Stack;
