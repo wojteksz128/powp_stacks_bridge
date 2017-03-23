@@ -1,5 +1,7 @@
 package edu.kis.vh.stacks.list;
 
+import edu.kis.vh.stacks.Stack;
+
 /**
  * Implementation of <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">stack</a> data structure. This structure in basically implement two methods: 
  * <br>   - {@link StackList#pushElement(int)} - add element into the stack,
@@ -16,13 +18,30 @@ public class StackList {
 	public static final int STACK_EMPTY = -1;
 	
 	private Node last;
+	
+	/**
+	 * Index of last inserted value into the stack. If stack is empty, than return {@link Stack#STACK_EMPTY}.
+	 * 
+	 * @return index of last inserted value
+	 */
+	public int getTotal() {
+		int count = -1;
+		Node current = last;
+		
+		while (current != null) {
+			++count;
+			current = current.getPrev();
+		}
+		
+		return count;
+	}
 
 	/**
 	 * Insert value into the stack.
 	 * 
 	 * @param i inserted value
 	 */
-	public void pushElement(int i) {
+	public void push(int i) {
 		if (last == null) {
 			last = new Node(i);
 		} else {
@@ -37,7 +56,7 @@ public class StackList {
 	 * 
 	 * @return true if this stack contains no elements
 	 */
-	public boolean empty() {
+	public boolean isEmpty() {
 		return last == null;
 	}
 
@@ -47,7 +66,7 @@ public class StackList {
 	 * 
 	 * @return true if this stack cannot storied more elements
 	 */
-	public boolean full() {
+	public boolean isFull() {
 		return false;
 	}
 
@@ -56,8 +75,8 @@ public class StackList {
 	 * 
 	 * @return last inserted value
 	 */
-	public int peek() {
-		if (empty()) {
+	public int top() {
+		if (isEmpty()) {
 			// TODO: Maybe if list is empty, than method should throw exception just like 'EmptyListException'.
 			return STACK_EMPTY;
 		}
@@ -70,7 +89,7 @@ public class StackList {
 	 * @return last inserted value
 	 */
 	public int pop() {
-		if (empty()) {
+		if (isEmpty()) {
 			// TODO: Maybe if list is empty, than method should throw exception just like 'EmptyListException'.
 			return STACK_EMPTY;
 		}

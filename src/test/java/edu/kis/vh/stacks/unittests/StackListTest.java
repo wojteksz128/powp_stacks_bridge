@@ -19,29 +19,29 @@ public class StackListTest {
 	@Test
 	public void testPushElement() {
 		int value = 4;
-		list.pushElement(value);
+		list.push(value);
 		Assert.assertEquals(value, list.pop());
 	}
 	
 	@Test
 	public void testIsEmpty() {
-		Assert.assertTrue(list.empty());
+		Assert.assertTrue(list.isEmpty());
 		
-		list.pushElement(1);
+		list.push(1);
 		
-		Assert.assertFalse(list.empty());
+		Assert.assertFalse(list.isEmpty());
 	}
 
 	@Test
 	public void testPeek() {
 		final int EMPTY_LIST = -1;
-		Assert.assertEquals(EMPTY_LIST, list.peek());
+		Assert.assertEquals(EMPTY_LIST, list.top());
 		
 		int value = 4;
-		list.pushElement(value);
+		list.push(value);
 		
-		Assert.assertEquals(value, list.peek());
-		Assert.assertEquals(value, list.peek());
+		Assert.assertEquals(value, list.top());
+		Assert.assertEquals(value, list.top());
 	}
 
 	@Test
@@ -49,7 +49,7 @@ public class StackListTest {
 		final int EMPTY_LIST = -1;
 		
 		int value = 4;
-		list.pushElement(value);
+		list.push(value);
 		
 		Assert.assertEquals(value, list.pop());
 		Assert.assertEquals(EMPTY_LIST, list.pop());
