@@ -4,8 +4,8 @@
 
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.list.StackList;
-import edu.kis.vh.stacks.list.Stackable;
+import edu.kis.vh.stacks.stackimplementation.StackList;
+import edu.kis.vh.stacks.stackimplementation.Stackable;
 
 // TODO: Can you implement Stack with variable size? Maybe with parameter size in constructor? 
 /**
@@ -32,7 +32,7 @@ public class Stack {
 
 	/**
 	 * @return index of last inserted value
-	 * @see edu.kis.vh.stacks.list.StackArray#getTotal()
+	 * @see edu.kis.vh.stacks.stackimplementation.StackArray#getTotal()
 	 */
 	public int getTotal() {
 		return stack.getTotal();
@@ -40,7 +40,7 @@ public class Stack {
 
 	/**
 	 * @param i inserted value
-	 * @see edu.kis.vh.stacks.list.StackArray#push(int)
+	 * @see edu.kis.vh.stacks.stackimplementation.StackArray#push(int)
 	 */
 	public void push(int i) {
 		stack.push(i);
@@ -48,7 +48,7 @@ public class Stack {
 
 	/**
 	 * @return true if this stack contains no elements
-	 * @see edu.kis.vh.stacks.list.StackArray#isEmpty()
+	 * @see edu.kis.vh.stacks.stackimplementation.StackArray#isEmpty()
 	 */
 	public boolean isEmpty() {
 		return stack.isEmpty();
@@ -56,7 +56,7 @@ public class Stack {
 
 	/**
 	 * @return true if this stack cannot storied more elements
-	 * @see edu.kis.vh.stacks.list.StackArray#isFull()
+	 * @see edu.kis.vh.stacks.stackimplementation.StackArray#isFull()
 	 */
 	public boolean isFull() {
 		return stack.isFull();
@@ -64,7 +64,7 @@ public class Stack {
 
 	/**
 	 * @return last inserted element
-	 * @see edu.kis.vh.stacks.list.StackArray#top()
+	 * @see edu.kis.vh.stacks.stackimplementation.StackArray#top()
 	 */
 	public int top() {
 		return stack.top();
@@ -72,7 +72,7 @@ public class Stack {
 
 	/**
 	 * @return last inserted element
-	 * @see edu.kis.vh.stacks.list.StackArray#pop()
+	 * @see edu.kis.vh.stacks.stackimplementation.StackArray#pop()
 	 */
 	public int pop() {
 		return stack.pop();

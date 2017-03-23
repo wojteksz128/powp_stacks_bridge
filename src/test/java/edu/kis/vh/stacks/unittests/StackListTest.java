@@ -3,8 +3,8 @@ package edu.kis.vh.stacks.unittests;
 import org.junit.Before;
 import org.junit.Test;
 
-import edu.kis.vh.stacks.list.StackList;
-import edu.kis.vh.stacks.list.Stackable;
+import edu.kis.vh.stacks.stackimplementation.StackList;
+import edu.kis.vh.stacks.stackimplementation.Stackable;
 import junit.framework.Assert;
 
 

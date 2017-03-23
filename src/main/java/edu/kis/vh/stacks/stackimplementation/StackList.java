@@ -3,7 +3,7 @@
  *    - Refactor -> Rename
  */
 
-package edu.kis.vh.stacks.list;
+package edu.kis.vh.stacks.stackimplementation;
 
 /**
  * Implementation of <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">stack</a> data structure. This structure in basically implement two methods: 
