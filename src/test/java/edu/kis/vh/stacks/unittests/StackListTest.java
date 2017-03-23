@@ -4,12 +4,13 @@ import org.junit.Before;
 import org.junit.Test;
 
 import edu.kis.vh.stacks.list.StackList;
+import edu.kis.vh.stacks.list.Stackable;
 import junit.framework.Assert;
 
 
 public class StackListTest {
 	
-	private StackList list;
+	private Stackable list;
 	
 	@Before
 	public void init() {

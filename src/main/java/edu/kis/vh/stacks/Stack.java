@@ -1,6 +1,7 @@
 package edu.kis.vh.stacks;
 
 import edu.kis.vh.stacks.list.StackList;
+import edu.kis.vh.stacks.list.Stackable;
 
 // TODO: Can you implement Stack with variable size? Maybe with parameter size in constructor? 
 /**
@@ -13,14 +14,14 @@ import edu.kis.vh.stacks.list.StackList;
  */
 public class Stack {
 
-	private StackList stack;
+	private Stackable stack;
 
 	public Stack() {
 		super();
 		this.stack = new StackList();
 	}
 
-	public Stack(StackList stack) {
+	public Stack(Stackable stack) {
 		super();
 		this.stack = stack;
 	}

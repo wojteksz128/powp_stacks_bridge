@@ -1,6 +1,8 @@
 package edu.kis.vh.stacks;
 
-public class StackArray {
+import edu.kis.vh.stacks.list.Stackable;
+
+public class StackArray implements Stackable {
 	/**
 	 * Value returned, when stack is empty.
 	 */

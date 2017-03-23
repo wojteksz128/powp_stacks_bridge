@@ -5,8 +5,6 @@
 
 package edu.kis.vh.stacks.list;
 
-import edu.kis.vh.stacks.Stack;
-
 /**
  * Implementation of <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">stack</a> data structure. This structure in basically implement two methods: 
  * <br>   - {@link StackList#pushElement(int)} - add element into the stack,
@@ -15,7 +13,7 @@ import edu.kis.vh.stacks.Stack;
  * @author Wojciech Szczepaniak
  *
  */
-public class StackList {
+public class StackList implements Stackable {
 
 	/**
 	 * Value returned, when stack is empty.
@@ -24,11 +22,10 @@ public class StackList {
 	
 	private Node last;
 	
-	/**
-	 * Index of last inserted value into the stack. If stack is empty, than return {@link Stack#STACK_EMPTY}.
-	 * 
-	 * @return index of last inserted value
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.list.Stackable#getTotal()
 	 */
+	@Override
 	public int getTotal() {
 		int count = -1;
 		Node current = last;
@@ -41,11 +38,10 @@ public class StackList {
 		return count;
 	}
 
-	/**
-	 * Insert value into the stack.
-	 * 
-	 * @param i inserted value
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.list.Stackable#push(int)
 	 */
+	@Override
 	public void push(int i) {
 		if (last == null) {
 			last = new Node(i);
@@ -56,30 +52,27 @@ public class StackList {
 		}
 	}
 
-	/**
-	 * Returns true if the stack contains no elements.
-	 * 
-	 * @return true if this stack contains no elements
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.list.Stackable#isEmpty()
 	 */
+	@Override
 	public boolean isEmpty() {
 		return last == null;
 	}
 
 	// TODO: This method is needed? 
-	/**
-	 * Returns true if stack cannot storied more elements.
-	 * 
-	 * @return true if this stack cannot storied more elements
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.list.Stackable#isFull()
 	 */
+	@Override
 	public boolean isFull() {
 		return false;
 	}
 
-	/**
-	 * Return last inserted value from the stack without removing it. If stack is empty, than return {@link StackList#STACK_EMPTY}.
-	 * 
-	 * @return last inserted value
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.list.Stackable#top()
 	 */
+	@Override
 	public int top() {
 		if (isEmpty()) {
 			// TODO: Maybe if list is empty, than method should throw exception just like 'EmptyListException'.
@@ -88,11 +81,10 @@ public class StackList {
 		return last.getValue();
 	}
 
-	/**
-	 * Return last inserted value from the stack and remove it. If stack is empty, than return {@link StackList#STACK_EMPTY}.
-	 * 
-	 * @return last inserted value
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.list.Stackable#pop()
 	 */
+	@Override
 	public int pop() {
 		if (isEmpty()) {
 			// TODO: Maybe if list is empty, than method should throw exception just like 'EmptyListException'.
