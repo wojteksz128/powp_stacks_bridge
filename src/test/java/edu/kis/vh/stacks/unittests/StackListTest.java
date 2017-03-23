@@ -35,7 +35,7 @@ public class StackListTest {
 
 	@Test
 	public void testPeek() {
-		final int EMPTY_LIST = -1;
+		final int EMPTY_LIST = 0;
 		Assert.assertEquals(EMPTY_LIST, list.top());
 		
 		int value = 4;
@@ -47,7 +47,7 @@ public class StackListTest {
 
 	@Test
 	public void testPop() {
-		final int EMPTY_LIST = -1;
+		final int EMPTY_LIST = 0;
 		
 		int value = 4;
 		list.push(value);

@@ -41,7 +41,7 @@ public class StackFIFOTest {
 	@Test
 	public void testTop() {
 		StackFIFO stack = new StackFIFO();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 		
 		Assert.assertEquals(EMPTY_STACK_VALUE, stack.top());
 		
@@ -55,7 +55,7 @@ public class StackFIFOTest {
 	@Test
 	public void testPop() {
 		StackFIFO stack = new StackFIFO();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 		
 		Assert.assertEquals(EMPTY_STACK_VALUE, stack.pop());
 		

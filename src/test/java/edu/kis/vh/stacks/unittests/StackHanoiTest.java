@@ -63,7 +63,7 @@ public class StackHanoiTest {
 	@Test
 	public void testTop() {
 		StackHanoi stack = new StackHanoi();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 		
 		Assert.assertEquals(EMPTY_STACK_VALUE, stack.top());
 		
@@ -77,7 +77,7 @@ public class StackHanoiTest {
 	@Test
 	public void testPop() {
 		StackHanoi stack = new StackHanoi();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 		
 		Assert.assertEquals(EMPTY_STACK_VALUE, stack.pop());
 		
