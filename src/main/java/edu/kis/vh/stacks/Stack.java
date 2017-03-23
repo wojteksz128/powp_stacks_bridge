@@ -1,3 +1,7 @@
+/*
+ * Adn 7. Wykonanie Refactor -> Generalize Declared Type spowodowało zmianę typu pola stack z StackList na Stackable. 
+ */
+
 package edu.kis.vh.stacks;
 
 import edu.kis.vh.stacks.list.StackList;
