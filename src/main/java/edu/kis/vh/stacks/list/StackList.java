@@ -1,3 +1,8 @@
+/*
+ * Użyteczne funkcje:
+ *    - Refactor -> Rename
+ */
+
 package edu.kis.vh.stacks.list;
 
 import edu.kis.vh.stacks.Stack;
