@@ -7,7 +7,7 @@ public interface Stackable {
 	/**
 	 * Value returned, when stack is empty.
 	 */
-	final int STACK_EMPTY = -1;
+	final int STACK_EMPTY = 0;
 
 	/**
 	 * Index of last inserted value into the stack. If stack is empty, than return {@link Stack#STACK_EMPTY}.
