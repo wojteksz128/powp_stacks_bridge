@@ -5,6 +5,11 @@ import edu.kis.vh.stacks.Stack;
 public interface Stackable {
 
 	/**
+	 * Value returned, when stack is empty.
+	 */
+	final int STACK_EMPTY = -1;
+
+	/**
 	 * Index of last inserted value into the stack. If stack is empty, than return {@link Stack#STACK_EMPTY}.
 	 * 
 	 * @return index of last inserted value
@@ -34,14 +39,14 @@ public interface Stackable {
 	boolean isFull();
 
 	/**
-	 * Return last inserted value from the stack without removing it. If stack is empty, than return {@link StackList#STACK_EMPTY}.
+	 * Return last inserted value from the stack without removing it. If stack is empty, than return {@link Stackable#STACK_EMPTY}.
 	 * 
 	 * @return last inserted value
 	 */
 	int top();
 
 	/**
-	 * Return last inserted value from the stack and remove it. If stack is empty, than return {@link StackList#STACK_EMPTY}.
+	 * Return last inserted value from the stack and remove it. If stack is empty, than return {@link Stackable#STACK_EMPTY}.
 	 * 
 	 * @return last inserted value
 	 */

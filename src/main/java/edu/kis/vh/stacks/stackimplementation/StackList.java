@@ -15,11 +15,6 @@ package edu.kis.vh.stacks.stackimplementation;
  */
 public class StackList implements Stackable {
 
-	/**
-	 * Value returned, when stack is empty.
-	 */
-	public static final int STACK_EMPTY = -1;
-	
 	private Node last;
 	
 	/* (non-Javadoc)
@@ -76,7 +71,7 @@ public class StackList implements Stackable {
 	public int top() {
 		if (isEmpty()) {
 			// TODO: Maybe if list is empty, than method should throw exception just like 'EmptyListException'.
-			return STACK_EMPTY;
+			return Stackable.STACK_EMPTY;
 		}
 		return last.getValue();
 	}
@@ -88,7 +83,7 @@ public class StackList implements Stackable {
 	public int pop() {
 		if (isEmpty()) {
 			// TODO: Maybe if list is empty, than method should throw exception just like 'EmptyListException'.
-			return STACK_EMPTY;
+			return Stackable.STACK_EMPTY;
 		}
 		int ret = last.getValue();
 		last = last.getPrev();

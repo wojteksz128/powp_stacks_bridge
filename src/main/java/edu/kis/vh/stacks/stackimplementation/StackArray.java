@@ -1,10 +1,6 @@
 package edu.kis.vh.stacks.stackimplementation;
 
 public class StackArray implements Stackable {
-	/**
-	 * Value returned, when stack is empty.
-	 */
-	public static final int STACK_EMPTY = -1;
 
 	private static final int STACK_SIZE = 12;
 
