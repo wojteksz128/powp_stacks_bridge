@@ -14,19 +14,15 @@ public class StackArray implements Stackable {
 
 	private int total = STACK_EMPTY;
 
-	/**
-	 * Index of last inserted value into the stack. If stack is empty, than return {@link Stack#STACK_EMPTY}.
-	 * 
-	 * @return index of last inserted value
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.list.Stackable#getTotal()
 	 */
 	public int getTotal() {
 		return total;
 	}
 
-	/**
-	 * Insert value into the stack.
-	 * 
-	 * @param i inserted value
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.list.Stackable#push(int)
 	 */
 	public void push(int i) {
 		if (!isFull()) {
@@ -35,28 +31,22 @@ public class StackArray implements Stackable {
 		// TODO: Add action if push is impossible.
 	}
 
-	/**
-	 * Returns true if stack contains no elements.
-	 * 
-	 * @return true if this stack contains no elements
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.list.Stackable#isEmpty()
 	 */
 	public boolean isEmpty() {
 		return total == STACK_EMPTY;
 	}
 
-	/**
-	 * Returns true if stack cannot storied more elements.
-	 * 
-	 * @return true if this stack cannot storied more elements
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.list.Stackable#isFull()
 	 */
 	public boolean isFull() {
 		return total == STACK_SIZE - 1;
 	}
 
-	/**
-	 * Return last inserted element into the stack without removing it. If stack is empty, than return {@link Stack#STACK_EMPTY}.
-	 * 
-	 * @return last inserted element
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.list.Stackable#top()
 	 */
 	public int top() {
 		if (isEmpty()) {
@@ -66,10 +56,8 @@ public class StackArray implements Stackable {
 		return items[total];
 	}
 
-	/**
-	 * Return last inserted element into the stack and remove it. If stack is empty, than return {@link Stack#STACK_EMPTY}.
-	 * 
-	 * @return last inserted element
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.list.Stackable#pop()
 	 */
 	public int pop() {
 		if (isEmpty()) {
