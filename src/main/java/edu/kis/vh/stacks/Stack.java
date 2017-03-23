@@ -24,7 +24,7 @@ public class Stack {
 	}
 
 	/**
-	 * @return
+	 * @return index of last inserted value
 	 * @see edu.kis.vh.stacks.StackArray#getTotal()
 	 */
 	public int getTotal() {
@@ -32,7 +32,7 @@ public class Stack {
 	}
 
 	/**
-	 * @param i
+	 * @param i inserted value
 	 * @see edu.kis.vh.stacks.StackArray#push(int)
 	 */
 	public void push(int i) {
@@ -40,7 +40,7 @@ public class Stack {
 	}
 
 	/**
-	 * @return
+	 * @return true if this stack contains no elements
 	 * @see edu.kis.vh.stacks.StackArray#isEmpty()
 	 */
 	public boolean isEmpty() {
@@ -48,7 +48,7 @@ public class Stack {
 	}
 
 	/**
-	 * @return
+	 * @return true if this stack cannot storied more elements
 	 * @see edu.kis.vh.stacks.StackArray#isFull()
 	 */
 	public boolean isFull() {
@@ -56,7 +56,7 @@ public class Stack {
 	}
 
 	/**
-	 * @return
+	 * @return last inserted element
 	 * @see edu.kis.vh.stacks.StackArray#top()
 	 */
 	public int top() {
@@ -64,7 +64,7 @@ public class Stack {
 	}
 
 	/**
-	 * @return
+	 * @return last inserted element
 	 * @see edu.kis.vh.stacks.StackArray#pop()
 	 */
 	public int pop() {
