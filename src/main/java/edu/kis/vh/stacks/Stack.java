@@ -11,80 +11,63 @@ package edu.kis.vh.stacks;
  */
 public class Stack {
 
+	private StackArray stack;
+
+	public Stack() {
+		super();
+		this.stack = new StackArray();
+	}
+
+	public Stack(StackArray stack) {
+		super();
+		this.stack = stack;
+	}
+
 	/**
-	 * Value returned, when stack is empty.
-	 */
-	public static final int STACK_EMPTY = -1;
-
-	private static final int STACK_SIZE = 12;
-
-	private int[] items = new int[STACK_SIZE];
-
-	private int total = STACK_EMPTY;
-
-	/**
-	 * Index of last inserted value into the stack. If stack is empty, than return {@link Stack#STACK_EMPTY}.
-	 * 
-	 * @return index of last inserted value
+	 * @return
+	 * @see edu.kis.vh.stacks.StackArray#getTotal()
 	 */
 	public int getTotal() {
-		return total;
+		return stack.getTotal();
 	}
 
 	/**
-	 * Insert value into the stack.
-	 * 
-	 * @param i inserted value
+	 * @param i
+	 * @see edu.kis.vh.stacks.StackArray#push(int)
 	 */
 	public void push(int i) {
-		if (!isFull()) {
-			items[++total] = i;
-		}
-		// TODO: Add action if push is impossible.
+		stack.push(i);
 	}
 
 	/**
-	 * Returns true if stack contains no elements.
-	 * 
-	 * @return true if this stack contains no elements
+	 * @return
+	 * @see edu.kis.vh.stacks.StackArray#isEmpty()
 	 */
 	public boolean isEmpty() {
-		return total == STACK_EMPTY;
+		return stack.isEmpty();
 	}
 
 	/**
-	 * Returns true if stack cannot storied more elements.
-	 * 
-	 * @return true if this stack cannot storied more elements
+	 * @return
+	 * @see edu.kis.vh.stacks.StackArray#isFull()
 	 */
 	public boolean isFull() {
-		return total == STACK_SIZE - 1;
+		return stack.isFull();
 	}
 
 	/**
-	 * Return last inserted element into the stack without removing it. If stack is empty, than return {@link Stack#STACK_EMPTY}.
-	 * 
-	 * @return last inserted element
+	 * @return
+	 * @see edu.kis.vh.stacks.StackArray#top()
 	 */
 	public int top() {
-		if (isEmpty()) {
-			// TODO: Maybe if stack is empty, than method should throw exception just like 'EmptyStackException'.
-			return STACK_EMPTY;
-		}
-		return items[total];
+		return stack.top();
 	}
 
 	/**
-	 * Return last inserted element into the stack and remove it. If stack is empty, than return {@link Stack#STACK_EMPTY}.
-	 * 
-	 * @return last inserted element
+	 * @return
+	 * @see edu.kis.vh.stacks.StackArray#pop()
 	 */
 	public int pop() {
-		if (isEmpty()) {
-			// TODO: Maybe if stack is empty, than method should throw exception just like 'EmptyStackException'.
-			return STACK_EMPTY;
-		}
-		return items[total--];
+		return stack.pop();
 	}
-
 }
