@@ -1,5 +1,7 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.list.StackList;
+
 // TODO: Can you implement Stack with variable size? Maybe with parameter size in constructor? 
 /**
  * Implementation of <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">stack</a> data structure, where we can storied no more than {@value Stack#STACK_SIZE} elements. This structure in basically implement two methods:
@@ -11,14 +13,14 @@ package edu.kis.vh.stacks;
  */
 public class Stack {
 
-	private StackArray stack;
+	private StackList stack;
 
 	public Stack() {
 		super();
-		this.stack = new StackArray();
+		this.stack = new StackList();
 	}
 
-	public Stack(StackArray stack) {
+	public Stack(StackList stack) {
 		super();
 		this.stack = stack;
 	}
