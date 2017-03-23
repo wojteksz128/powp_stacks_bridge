@@ -57,7 +57,7 @@ public class StackHanoiTest {
 			stack.push(123);
 		}
 		
-		Assert.assertTrue(stack.isFull());
+		Assert.assertFalse(stack.isFull());
 	}
 	
 	@Test

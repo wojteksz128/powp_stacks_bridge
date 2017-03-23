@@ -40,7 +40,7 @@ public class StackTest {
 		}
 
 		boolean result = stackObj.isFull();
-		Assert.assertEquals(true, result);
+		Assert.assertEquals(false, result);
 	}
 
 	@Test
