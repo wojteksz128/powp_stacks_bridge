@@ -1,5 +1,6 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.stackimplementation.Stackable;
 
 /**
  * Implementation of <a href="https://en.wikipedia.org/wiki/Queue_(abstract_data_type)">queue</a> data structure. This structure implement two methods:
@@ -12,6 +13,14 @@ package edu.kis.vh.stacks;
 public class StackFIFO extends Stack {
 
 	private final Stack stack = new Stack();
+
+	public StackFIFO() {
+		super();
+	}
+
+	public StackFIFO(Stackable stack) {
+		super(stack);
+	}
 
 	/**
 	 * Return first inserted element and remove it. If queue is empty, than return {@link Stack#STACK_EMPTY}.

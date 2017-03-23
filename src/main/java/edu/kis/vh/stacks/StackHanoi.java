@@ -1,5 +1,7 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.stackimplementation.Stackable;
+
 /**
  * Implementation of stack on the <a href="https://en.wikipedia.org/wiki/Tower_of_Hanoi">Tower of Hanoi</a> problem. You can push into the stack only element not greater than last pushed element.
  * 
@@ -9,6 +11,14 @@ package edu.kis.vh.stacks;
 public class StackHanoi extends Stack {
 
 	private int totalRejected = 0;
+
+	public StackHanoi() {
+		super();
+	}
+
+	public StackHanoi(Stackable stack) {
+		super(stack);
+	}
 
 	/**
 	 * Return number of wrong inserted into the stack. 
