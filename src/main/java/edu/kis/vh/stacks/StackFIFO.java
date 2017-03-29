@@ -1,3 +1,9 @@
+/*
+ * Wnioski dla punktu 13:
+ *    - wymienione funkcje programu Eclipse przydadzą się do analizy budowy kodu,
+ *    - funkcje pomagają przy znalezieniu implementacji klasy, metody, itp.
+ */
+
 package edu.kis.vh.stacks;
 
 import edu.kis.vh.stacks.stackimplementation.Stackable;
