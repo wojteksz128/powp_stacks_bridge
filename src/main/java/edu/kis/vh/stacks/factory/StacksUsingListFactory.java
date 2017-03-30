@@ -22,8 +22,7 @@ public class StacksUsingListFactory implements StacksFactory {
 	 */
 	@Override
 	public Stack getStandardStack() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Stack(new StackList());
 	}
 
 	/* (non-Javadoc)
@@ -31,8 +30,7 @@ public class StacksUsingListFactory implements StacksFactory {
 	 */
 	@Override
 	public Stack getFalseStack() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Stack(new StackArray());
 	}
 
 	/* (non-Javadoc)
@@ -40,8 +38,7 @@ public class StacksUsingListFactory implements StacksFactory {
 	 */
 	@Override
 	public StackFIFO getFIFOStack() {
-		// TODO Auto-generated method stub
-		return null;
+		return new StackFIFO(new StackList());
 	}
 
 	/* (non-Javadoc)
@@ -49,8 +46,7 @@ public class StacksUsingListFactory implements StacksFactory {
 	 */
 	@Override
 	public StackHanoi getHanoiStack() {
-		// TODO Auto-generated method stub
-		return null;
+		return new StackHanoi(new StackList());
 	}
 
 }
