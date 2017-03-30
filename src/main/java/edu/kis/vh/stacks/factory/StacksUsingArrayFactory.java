@@ -6,6 +6,8 @@ package edu.kis.vh.stacks.factory;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
+import edu.kis.vh.stacks.stackimplementation.StackArray;
+import edu.kis.vh.stacks.stackimplementation.StackList;
 
 /**
  * @author Wojciech Szczepaniak
@@ -18,8 +20,7 @@ public class StacksUsingArrayFactory implements StacksFactory {
 	 */
 	@Override
 	public Stack getStandardStack() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Stack(new StackArray());
 	}
 
 	/* (non-Javadoc)
@@ -27,8 +28,7 @@ public class StacksUsingArrayFactory implements StacksFactory {
 	 */
 	@Override
 	public Stack getFalseStack() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Stack(new StackList());
 	}
 
 	/* (non-Javadoc)
@@ -36,8 +36,7 @@ public class StacksUsingArrayFactory implements StacksFactory {
 	 */
 	@Override
 	public StackFIFO getFIFOStack() {
-		// TODO Auto-generated method stub
-		return null;
+		return new StackFIFO(new StackArray());
 	}
 
 	/* (non-Javadoc)
@@ -45,8 +44,7 @@ public class StacksUsingArrayFactory implements StacksFactory {
 	 */
 	@Override
 	public StackHanoi getHanoiStack() {
-		// TODO Auto-generated method stub
-		return null;
+		return new StackHanoi(new StackArray());
 	}
 
 }
