@@ -6,6 +6,7 @@
 
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.stackimplementation.StackList;
 import edu.kis.vh.stacks.stackimplementation.Stackable;
 
 /**
@@ -18,14 +19,17 @@ import edu.kis.vh.stacks.stackimplementation.Stackable;
  */
 public class StackFIFO extends Stack {
 
-	private final Stack stack = new Stack();
+	// Konieczne jest użycie StackList, ze względu na to, że standardowa implementacja Stack używa StackList w swojej implementacji. Użycie StackArray mogłoby spowodować problemy, gdy jest więcej elementów w StackFIFO niż STACK_SIZE.
+	private final Stack stack;
 
 	public StackFIFO() {
 		super();
+		stack = new Stack(new StackList());
 	}
 
 	public StackFIFO(Stackable stack) {
 		super(stack);
+		this.stack = new Stack(stack);
 	}
 
 	/**
