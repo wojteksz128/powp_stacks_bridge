@@ -4,14 +4,19 @@ import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 import edu.kis.vh.stacks.factory.StacksFactory;
+import edu.kis.vh.stacks.factory.StacksUsingArrayFactory;
+import edu.kis.vh.stacks.factory.StacksUsingListFactory;
 
 class StacksDemo {
 
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
+		StacksUsingArrayFactory stacksUsingArrayFactory = new StacksUsingArrayFactory();
+		StacksUsingListFactory stacksUsingListFactory = new StacksUsingListFactory();
 
 		testStacks(factory);
-
+		testStacks(stacksUsingListFactory);
+		testStacks(stacksUsingArrayFactory);
 	}
 
 	private static void testStacks(StacksFactory factory) {
