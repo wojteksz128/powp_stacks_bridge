@@ -20,7 +20,7 @@ public class StackArray implements Stackable {
 	 */
 	public void push(int i) {
 		if (!isFull()) {
-			items[++total] = i;
+			items[total++] = i;
 		}
 		// TODO: Add action if push is impossible.
 	}
@@ -36,7 +36,7 @@ public class StackArray implements Stackable {
 	 * @see edu.kis.vh.stacks.list.Stackable#isFull()
 	 */
 	public boolean isFull() {
-		return total == STACK_SIZE - 1;
+		return total == STACK_SIZE;
 	}
 
 	/* (non-Javadoc)
@@ -47,7 +47,7 @@ public class StackArray implements Stackable {
 			// TODO: Maybe if stack is empty, than method should throw exception just like 'EmptyStackException'.
 			return STACK_EMPTY;
 		}
-		return items[total];
+		return items[total - 1];
 	}
 
 	/* (non-Javadoc)
@@ -58,6 +58,6 @@ public class StackArray implements Stackable {
 			// TODO: Maybe if stack is empty, than method should throw exception just like 'EmptyStackException'.
 			return STACK_EMPTY;
 		}
-		return items[total--];
+		return items[--total];
 	}
 }
