@@ -10,6 +10,8 @@ import edu.kis.vh.stacks.stackimplementation.StackArray;
 import edu.kis.vh.stacks.stackimplementation.StackList;
 
 /**
+ * Methods in this factory create stacks, who use {@link StackArray} implementation of stack.
+ * 
  * @author Wojciech Szczepaniak
  *
  */
