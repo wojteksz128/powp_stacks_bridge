@@ -7,15 +7,15 @@ import org.junit.Test;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
-import edu.kis.vh.stacks.factory.DefaultStacksFactory;
+import edu.kis.vh.stacks.factory.StacksUsingListFactory;
 
 public class StacksUsingListFactoryTest {
 	
-	private DefaultStacksFactory factory;
+	private StacksUsingListFactory factory;
 	
 	@Before
 	public void init() {
-		this.factory = new DefaultStacksFactory();
+		this.factory = new StacksUsingListFactory();
 	}
 	
 	@Test
