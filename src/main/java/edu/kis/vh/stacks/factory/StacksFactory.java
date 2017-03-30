@@ -1,3 +1,8 @@
+/*
+ * Stworzone w pkt 15 klasy fabryk łamią zasadę izolacji przez użycie konkretnych klas StackList oraz StackArray do tworzenia obiektu.
+ * Lepszym rozwiązaniem byłoby stworzenie generycznej klasy fabryki, która jako parametr przyjmuje obiekty implementujące interfejs Stackable.
+ */
+
 package edu.kis.vh.stacks.factory;
 
 import edu.kis.vh.stacks.Stack;
